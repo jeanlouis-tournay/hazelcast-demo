@@ -1,0 +1,21 @@
+{
+  "name": "hz-demo",
+  "description": "demo hazelcast",
+  "version": "1.0.0",
+  "components": [
+    {
+      "name": "hz-demo",
+      "imageName": "hazelcast-demo:latest",
+      "description": "hz-demo",
+      "controllerType": "deployment",
+      "containerType": "springboot",
+      "serviceEndPoint": {
+        "name": "hz-demo",
+        "port": 8000,
+        "protocol": "http",
+        "visibleByGateway": true
+      }
+    }
+  ],
+  "platformVersion": "1.0.0"
+}

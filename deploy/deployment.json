@@ -1,0 +1,15 @@
+{
+  "productName": "hz-demo",
+  "specificationName": "poc-hazelcast-cluster",
+  "componentSpecifications": {
+    "hz-demo": [
+      {
+        "version": "1.0.0",
+        "nbRequestedInstances": 3,
+        "customSpec": {
+          "HZCLUSTER_ADDRESSES": "hz-hazelcast-0.hz-hazelcast.hazelcast-operator.svc.cluster.local:5701,hz-hazelcast-1.hz-hazelcast.hazelcast-operator.svc.cluster.local:5701,hz-hazelcast-2.hz-hazelcast.hazelcast-operator.svc.cluster.local:5701"
+        }
+      }
+    ]
+  }
+}
