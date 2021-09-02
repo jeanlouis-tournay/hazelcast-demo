@@ -1,14 +1,30 @@
 {
-  "name": "hz-demo",
-  "description": "demo hazelcast",
-  "version": "1.0.0",
+  "name": "hz-test",
+  "version": "1.0",
+  "description": "Hazelcast demo",
+  "platformVersion": "1.0.0",
   "components": [
     {
-      "name": "hz-demo",
-      "imageName": "hazelcast-demo:latest",
-      "description": "hz-demo",
-      "controllerType": "deployment",
+      "name": "hz-server",
+      "description": "Hazelcast server",
+      "imageName": "service-discovery-1:1.0.0-SNAPSHOT",
       "containerType": "springboot",
+      "platformServices": {
+        "hazelcast-discovery": {
+          "mode": "server"
+        }
+      }
+    },
+    {
+      "name": "hz-client",
+      "imageName": "hazelcast-demo:latest",
+      "description": "hazelcast client",
+      "containerType": "springboot",
+      "platformServices": {
+        "hazelcast-discovery": {
+          "mode": "client"
+        }
+      },
       "serviceEndPoint": {
         "name": "hz-demo",
         "port": 8000,
@@ -16,6 +32,5 @@
         "visibleByGateway": true
       }
     }
-  ],
-  "platformVersion": "1.0.0"
+  ]
 }

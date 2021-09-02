@@ -1,5 +1,6 @@
-export TARGET=http://hz-demo-hz-demo.apps.envm.envm.dplt.eu
+export TARGET=http://hz-test-hz-demo.apps.envm.envm.dplt.eu
 export CURL_PROXY="--socks5-hostname localhost:1080 -k"
+
 
 
 push_data() {
@@ -13,5 +14,5 @@ push_data() {
   echo "Operation succeeded"
 }
 
-push_data car.json G-12345
+push_data car.json B-12345
 
